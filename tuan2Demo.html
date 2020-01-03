@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>HTML fundamentals</title>
+		<meta charset="utf-8">
+		<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<form name="myForm" method="Get" action=".">
+                <p><b>User name</b></p>
+               <input type="email" name="username" placeholder="Enter your email", required="">
+               <br>
+               <p><b>Password</b></p>
+               <input type="password" name="password" placeholder="Enter your password">
+               <br>
+
+               <p>Comment</p>
+               <textarea rows="5", cols="50"></textarea>
+               <br>
+               
+                <hr>
+                <div>
+                    <p><b>Habit</b></p>
+                    <i>Game </i><input type="checkbox" name="fruit" value="apple"/>
+                    <i>Sport </i><input type="checkbox" name="fruit" value="apple"/>
+                    <i>Music </i><input type="checkbox" name="fruit" value="apple"/>
+                </div>
+                <hr>
+                <div>
+                    <p><b>Gender</b></p>
+                    <i>Male </i><input type="radio" name="Gender" value="Male"/> 
+                    <i>Female </i><input type="radio" name="Gender" value="Female"/>
+                    <i>Other </i><input type="radio" name="Gender" value="Other"/>
+                    <hr>
+                    <p><b>City</b></p>
+                    <select name="City">
+                        <option value="HCM" selected="selected">Ho chi minh city</option>
+                        <option value="HN" selected="selected">Ha noi</option>
+                        <option value="DNang" selected="selected">Da Nang</option>
+                    </select>
+                </div>
+                <hr>
+                <p><b>Date of birth</b></p>
+                Day <input type="range" name="Day" min="1" max="31">
+                Month<input type="number" name="Month" min="0" max="12">
+                <label for="Year">Year</label>
+               <input type="text" name="Year" id="inputYear", placeholder="Enter Year">
+                <br>
+                <input type="reset" name="resetBtn" value="Reset the form">
+                <input type="submit" name="submitBtn" value="Send">
+                <hr>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/wLDjiFSCSVE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    
+                </iframe>
+        </form>
+	</body>
+</html>
