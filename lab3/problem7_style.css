@@ -1,0 +1,65 @@
+p.tag {
+	margin-bottom: 2px;
+	color: #2AAAFF;
+}
+img{
+	width: 20px;
+	height: 22px;
+}
+#play {
+	width: 15px;
+	height: 15px;
+}
+#iran {
+	width: 12px;
+	height: 12px;
+}
+a.video {
+	margin-bottom: 5px;
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+span {
+	text-decoration: none;
+	color: black;
+	padding-left: 5px;
+}
+p.info {
+	margin-top: 7px;
+	font-size: 10px;
+	color: #a5a5a5;
+	padding-right: 5px;
+}
+li{
+	margin-left: -20px;
+	padding: 5px;
+	color: #2D2d2d;
+}
+span.name {
+	line-height: 30px;
+	margin-bottom: 12px;
+	color: #75CADA;
+}
+span.info {
+	margin-top: 7px;
+	font-size: 10px;
+	color: #a5a5a5;
+	padding-right: 5px;
+}
+section.news {
+	border: groove;
+}
+section.ad {
+	border: groove;
+}
+#sontung {
+	width: 20px;
+	height: 20px;
+	padding-left: 12px;
+	margin-top: 12px;
+}

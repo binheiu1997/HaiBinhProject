@@ -1,0 +1,14 @@
+img {
+	width: 150px;
+	height: 150px;
+	padding-left: 40px;
+}
+p {
+	width: 250px;
+}
+div {
+	color: red;
+}
+section {
+	border: groove;
+}

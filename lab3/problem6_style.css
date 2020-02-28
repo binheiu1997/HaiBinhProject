@@ -1,0 +1,39 @@
+.header {
+	text-align: center;
+	color: #FAFAD2;
+	font-size: 40px;
+}
+body {
+	background-color: #A9A9A9;
+}
+nav {
+	font-family: "Times New Roman", Times, serif;
+	margin: 0 auto; 
+	text-align: center;
+}
+a {
+	text-decoration: none;
+}
+a.second {
+	background-color: #d3d3d3;
+}
+a.fourth {
+	text-decoration: underline;
+}
+a:hover {
+	background-color: #d3d3d3;
+}
+
+a {
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+h2 {
+	color: #FAFAD2;
+}
+footer.telerik {
+	font-family: "Times New Roman", Times, serif;
+	margin: 0 auto; 
+	text-align: center;
+}
