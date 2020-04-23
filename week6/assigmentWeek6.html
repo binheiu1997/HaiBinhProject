@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Js fundamentals</title>
+	<meta charset="utf-8">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style type="text/css">
+	</style>
+	<script type="text/javascript">
+		function printList (list) {
+			for (var i = 0; i < list.length; i++) 
+			{
+				console.log(list[i]);
+			}
+		}
+		function deleteDuplicate (arrayNeed, key) {
+			for (var i = 0; i < arrayNeed.length; i++) {
+				if (arrayNeed[i] === key) {
+					arrayNeed.splice(i, 1);
+				}
+			}
+		}
+		function concatenatesString (arrayNeed1, arrayNeed2) {
+			for (var i = 0; i < arrayNeed1.length; i++) {
+				var a = `
+			<div class="col-md-3">
+			<div class="products" style="position: relative;">
+			<img src="https://cdn.nguyenkimmall.com/images/thumbnails/696/522/detailed/590/10041816_NOI-COM-DIEN_SUNHOUSE_1-8L_SHD8607W_01.jpg" id="NoiCom">
+			<div style="position: absolute; background-color: red; top: 0px; right: 0px; color: #FFFFFF">50%</div>
+			<div>
+			<p id="quangCao">noi com dien gia sieu loi</p>
+			<span style="padding-right: 20px;"><b>2.000.000 ₫</b></span>
+			<span><del><small>5.000.000 ₫</small></del></span>
+			</div>
+			</div>
+			</div>
+			`;
+			console.log(a);
+			}
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var str = ["ung van giau", "hoang hai binh", "nguyen thanh", "ba tong" ,"thanh tu"];
+		printList(str);
+		
+		deleteDuplicate(str, "hoang hai binh");
+		printList(str);
+
+
+		concatenatesString(str);
+
+	</script>
+</body>
+</html>
