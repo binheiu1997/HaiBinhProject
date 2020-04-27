@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>HTML fundamentals</title>
+	<meta charset="utf-8">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+	<script type="text/javascript">
+		function product(_id,_name,_image,_price,_discontedPrice){
+			return {
+				id : _id,
+				name : _name,
+				image : _image,
+				price : _price,
+				discontedPrice : _discontedPrice,
+				toString : function(){
+					return this.id;
+				}
+			};
+		}
+
+		let product1, product2, product3;
+
+		product1 = product(1, 'product1', 'image1', '999', '50%');
+		product2 = product(2, 'product2', 'image2', '999', '50%');
+		product3 = product(3, 'product3', 'image3', '999', '50%');
+
+		var productList = [product1, product2, product3];
+
+		function showProduct(_list) {
+			for (var i = 0; i < _list.length; i++) {
+				console.log(_list[i]);
+			}
+		}
+
+		showProduct(productList);
+
+		function deleteElementByID(_productList,_id){
+			for (var i = 0; i < _productList.length; i++) {
+				if (_productList.id == _id) {
+					_productList.splice(i,1);
+				}
+			}
+		}
+
+		var id = 1;
+		deleteElementByID(productList, id);
+		showProduct(productList);
+
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>

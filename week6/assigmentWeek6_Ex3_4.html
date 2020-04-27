@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Event</title>
+
+    <style type="text/css">
+        header, footer {
+            background-color: grey;
+            color: white;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .menu, .content {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .content {
+            /*border: 1px solid #ccc;*/
+        }
+        .content-border {
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+        }
+        
+        h2.title {
+            color: #555;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            border-bottom: 5px solid #ff8c00;
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 3px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .item article {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+            padding: 15px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .item img {
+            display: block;
+            margin: 0 auto;
+        }
+        .item .giam-gia {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            padding-bottom: 4px;
+            color: #fff;
+            width: 40px;
+            height: 36px;
+            background-image: url("https://frontend.tikicdn.com/_new-next/static/img/icons/product/deal-tag.png");
+            background-size: 40px 36px;
+            background-position: 0px 0px;
+        }
+        .item .ten-sp {
+            color: #555;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .item a:hover, .news a:hover {            
+            text-decoration: none;
+        }
+        .item article:hover .ten-sp, .news:hover a h3 {
+            color: rgb(24, 158, 255);
+        }
+        .item .gia {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .item .gia-goc {
+            font-weight: normal;
+            text-decoration: line-through;
+            font-size: 13px;
+            margin-left: 15px;
+        }
+
+        article.group-news {
+            border: 1px solid #333;
+            padding: 20px 10px 0px;
+            border-radius: 12px;
+            margin-bottom: 30px
+        }
+
+        .news {
+            margin-bottom: 20px;
+        }
+
+        .news img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .news a:hover {
+            text-decoration: none;
+        }
+        .news a h3 {
+            color: #555;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .news p {
+            color: #111;
+        }
+        .news p.info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-bottom: 0;
+        }
+        .news p.info .author {
+            color: rgb(24, 158, 255);
+        }
+                .name {
+            color: #808080;
+        }
+        #NoiCom {
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 10px;
+        }
+        h3 {
+            width: 2%;
+            height: 1px;
+        }
+        #quangCao {
+            font-family: bold;
+            font-size: 20px;
+        }
+        div.products {
+            box-shadow: 5px 5px 5px 8px #888;
+            border-radius: 10px;
+            width: 100%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body onload="function_load();">    
+    <header>
+        Công ty ABC
+    </header>
+    
+    <div class="container-fluid"> <!-- Thiết lập kích thước màn hình mà nội dung có thể hiển thị -->
+        <h2 class="title">Có thể bạn thích</h2>
+
+        <div class="row" id="RelatedProducts">
+         
+        </div>
+        <!-- End row -->
+        <div class="row" id="abc">
+
+                    
+        </div>
+        <div style="text-align: center; padding: 30px 0px;">
+            <button type="button" class="btn btn-outline-primary" id="ViewMore" onclick="viewMoreFunction();">Xem thêm</button>
+        </div>
+    </div>
+
+    <footer>Footer</footer>
+
+    <script type="text/javascript">
+
+        var id = document.getElementById('RelatedProducts');
+        id.innerHTML = concatenatesStringEx3();
+
+        function viewMoreFunction(){
+            let value = document.getElementById('abc');
+            value.innerHTML = concatenatesStringEx4();
+        } 
+
+        function concatenatesStringEx3(){
+            var a = "";
+            for (var i = 0; i < 4; i++) {
+                a += `
+                    <div class="col-xl-3 col-12 item"> 
+                <article>
+                    <a href="">
+                        <img src="https://salt.tikicdn.com/cache/200x200/media/catalog/product/e/j/ejr351brw_1.u2769.d20161208.t120022.243831.jpg" alt="Nồi cơm điện"></a>
+                    <div class="giam-gia">-50%</div>
+                    <a href=""><div class="ten-sp">Nồi cơm điện vừa bán vừa cho</div></a>
+                    <div class="gia">2.000.000 đ <span class="gia-goc">5.000.000 đ</span></div>
+                </article>
+            </div>
+            `;          
+            }
+            return a;
+        }
+
+
+
+        function concatenatesStringEx4(){
+            var a = "";
+            for (var i = 0; i < 4; i++) {
+                a += `
+                    <div class="col-md-3">
+                        <div class="products" style="position: relative;">
+                            <img src="https://cdn.nguyenkimmall.com/images/thumbnails/696/522/detailed/590/10041816_NOI-COM-DIEN_SUNHOUSE_1-8L_SHD8607W_01.jpg" id="NoiCom">
+                            <div style="position: absolute; background-color: red; top: 0px; right: 0px; color: #FFFFFF">50%</div>
+                            <div>
+                                <p id="quangCao">noi com dien gia sieu loi</p>
+                                <span style="padding-right: 20px;"><b>2.000.000 ₫</b></span>
+                                <span><del><small>5.000.000 ₫</small></del></span>
+                            </div>
+                        </div>
+                    </div>
+            `;          
+            }
+            return a;
+        }
+    </script>
+</body>
+</html>
