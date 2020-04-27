@@ -44,7 +44,7 @@
 
 		function deleteElementByID(_productList,_id){
 			for (var i = 0; i < _productList.length; i++) {
-				if (_productList.id == _id) {
+				if (_productList[i].id === _id) {
 					_productList.splice(i,1);
 				}
 			}
