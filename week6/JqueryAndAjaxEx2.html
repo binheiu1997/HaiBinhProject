@@ -1,0 +1,274 @@
+2019-2020 - 2nd - CSE 307 - Web Programming
+Due 23:30
+jQuery and Ajax Exercises
+100 points
+
+Giàu Ung Văn
+28 Apr
+1. Create a table like the following image and code functions:
+- When you click on "Xóa" Link or Button, the row which contains the Link/Button will be removed.
+- When you insert text into 2 input fields and clink on "Thêm" Link/Button, the data will be appended to the table. Note: The Data Row is inserted before the row which contains the "Thêm" Link/Button
+
+2. Write a function using AJAX to get new data from server and append to the "Có Thể Bạn Thích" Section. Note: you must use product name, price and image from the new data.
+- Use get method
+- URL: http://66.42.50.227/data-ajax.php
+- Parameter: GetProducts
+- Parameter Value: All
+- Data Type: json
+- Object Properties: Name, Price, Image_URL
+
+Read the slide again and try it yourself because I forgot recording the lesson.
+
+6. Name List - Table.JPG
+Image
+
+6. Ajax.html
+HTML
+Class comments
+
+Your work
+Assigned
+Private comments
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Event</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style type="text/css">
+        header, footer {
+            background-color: grey;
+            color: white;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .menu, .content {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .content {
+            /*border: 1px solid #ccc;*/
+        }
+        .content-border {
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+        }
+        
+        h2.title {
+            color: #555;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            border-bottom: 5px solid #ff8c00;
+            font-size: 18px;
+            font-weight: bold;
+            padding-bottom: 3px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .item article {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+            padding: 15px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .item img {
+            display: block;
+            margin: 0 auto;
+        }
+        .item .giam-gia {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            padding-bottom: 4px;
+            color: #fff;
+            width: 40px;
+            height: 36px;
+            background-image: url("https://frontend.tikicdn.com/_new-next/static/img/icons/product/deal-tag.png");
+            background-size: 40px 36px;
+            background-position: 0px 0px;
+        }
+        .item .ten-sp {
+            color: #555;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .item a:hover, .news a:hover {            
+            text-decoration: none;
+        }
+        .item article:hover .ten-sp, .news:hover a h3 {
+            color: rgb(24, 158, 255);
+        }
+        .item .gia {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .item .gia-goc {
+            font-weight: normal;
+            text-decoration: line-through;
+            font-size: 13px;
+            margin-left: 15px;
+        }
+
+        article.group-news {
+            border: 1px solid #333;
+            padding: 20px 10px 0px;
+            border-radius: 12px;
+            margin-bottom: 30px
+        }
+
+        .news {
+            margin-bottom: 20px;
+        }
+
+        .news img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .news a:hover {
+            text-decoration: none;
+        }
+        .news a h3 {
+            color: #555;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .news p {
+            color: #111;
+        }
+        .news p.info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-bottom: 0;
+        }
+        .news p.info .author {
+            color: rgb(24, 158, 255);
+        }
+    </style>
+    <script>
+    $(document).ready(function(){
+
+            $(".delete").on('click', function() {
+                $(this).parent().parent().remove();
+            });
+
+        $(".addData").on('click', function(){
+            var firstName = $("#FirstName").val();
+            var lastName = $("#LastName").val();
+            var newData = `<tr>
+            <th scope="row">New</th>
+            <td> `+ firstName + `</td>
+            <td>`+ lastName + `</td>
+            <td><button class="delete">xoa</button></td>
+            </tr>`;
+            $("table tbody").append(newData);
+        });
+    }
+
+    function function_load() {
+        var str = "";
+        $.get(
+            "http://66.42.50.227/data-ajax.php",
+            {
+                GetProducts: "All"
+            },
+            function(data){
+                for(var i = 0; i < data.length; i++){
+                    str +=`
+                    <div class="col-xl-3 col-12 item"> 
+                    <article>
+                    <a href="">
+                    <img src="${data[i].Image_URL}" alt="${data[i].Name}"></a>
+                    <div class="giam-gia">-50%</div>
+                    <a href=""><div class="ten-sp">${data[i].Name}</div></a>
+                    <div class="gia">${data[i].price} <span class="gia-goc">5.000.000 đ</span></div>
+                    </article>
+                    </div>
+                    `;
+                }
+                $(str).appendTo("#RelatedProducts");
+            }, "json"
+            );
+    }
+</script>
+</head>
+<body onload="function_load();">    
+    <header>
+        Công ty ABC
+    </header>
+    <h2 class="title">Name list</h2>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Function</th>
+      </tr>
+  </thead>
+  <tfoot>
+
+  </tfoot>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td><button class="delete">xoa</button></td>
+  </tr>
+  <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td><button class="delete">xoa</button></td>
+  </tr>
+  <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td><button class="delete">xoa</button></td>
+  </tr>
+  <tr>
+      <td scope="row">Input</td>
+      <td><input type="text" name="First" id="FirstName"></td>
+      <td><input type="text" name="Last" id="LastName"></td>
+      <td><button class="addData">them</button></td>
+  </tr>
+</tbody>
+</table>
+
+<div class="container-fluid"> <!-- Thiết lập kích thước màn hình mà nội dung có thể hiển thị -->
+    <h2 class="title">Có thể bạn thích</h2>
+
+    <div class="row" id="RelatedProducts"> 
+
+    </div>
+    <!-- End row -->
+
+    <div style="text-align: center; padding: 30px 0px;">
+        <button type="button" class="btn btn-outline-primary" id="ViewMore">Xem thêm</button>
+    </div>
+</div>
+<footer>Footer</footer>
+
+<script type="text/javascript">        
+
+</script>
+        </body>
+        </html>
+        6. Ajax.html
+        Displaying 6. Ajax.html.

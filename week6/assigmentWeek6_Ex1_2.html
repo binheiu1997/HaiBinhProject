@@ -46,6 +46,7 @@
 			for (var i = 0; i < _productList.length; i++) {
 				if (_productList[i].id === _id) {
 					_productList.splice(i,1);
+					break;
 				}
 			}
 		}
@@ -54,6 +55,31 @@
 		deleteElementByID(productList, id);
 		showProduct(productList);
 
+		var arrayProduct = [
+			{
+				id : '1',
+				name : 'apple',
+				image : 'image1',
+				price : 500,
+				discontedPrice : 499
+			},
+			{
+				id : '2',
+				name : 'apple2',
+				image : 'image12',
+				price : 500,
+				discontedPrice : 499
+			},
+			{
+				id : '3',
+				name : 'apple3',
+				image : 'image13',
+				price : 500,
+				discontedPrice : 499
+			}
+
+		];
+		showProduct(arrayProduct);
 	</script>
 </head>
 <body>
