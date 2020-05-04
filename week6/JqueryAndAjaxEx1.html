@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <title>JqueryAndAjax</title>
+
+  <style type="text/css">
+    h1.title {
+      color: #555;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: inline-block;
+      border-bottom: 5px solid #ff8c00;
+      font-size: 18px;
+      font-weight: bold;
+      padding-bottom: 3px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $("table").on('click', ".delete", function() {
+        $(this).parent().parent().remove();
+      });
+
+      $(".addData").on('click', function(){
+        var firstName = $("#FirstName").val();
+        var lastName = $("#LastName").val();
+        var newData = `<tr>
+        <th scope="row">New</th>
+        <td> `+ firstName + `</td>
+        <td>`+ lastName + `</td>
+        <td><button class="delete">xoa</button></td>
+        </tr>`;
+        $("table tbody").append(newData);
+      });
+    });
+
+  </script>
+</head>
+<body>
+  <h1 class="title">Name list</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Function</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <td scope="row">Input</td>
+      <td><input type="text" name="First" id="FirstName"></td>
+      <td><input type="text" name="Last" id="LastName"></td>
+      <td><button class="addData">them</button></td>
+    </tfoot>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td><button class="delete">xoa</button></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td><button class="delete">xoa</button></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td><button class="delete">xoa</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
