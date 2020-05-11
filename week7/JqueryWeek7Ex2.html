@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+
+  <script type="text/javascript">
+    let academyRegex = /telerik\s(software\s|algo\s|kids\s)?academy/gi;
+
+    let text = 'George is studying JavaScript at Telerik Acaddemy, while Jimmy goes to Telerik Kids Academy.';
+
+    let matches = text.match(academyRegex);
+
+    for (var i = 0; i < matches.length; i++) {
+      console.log(matches[i]);
+    }
+
+    while(currentMatch = academyRegex.exec(text)) {
+      console.log(currentMatch);
+    }
+
+    let text_2 = 'text  with  lots of   spaces\n' + '   and lots of tabulations   ';
+
+    console.log(text_2.replace(/\s\s+/g, ' '));
+
+    let expression = '4+5*count-initialCount+1';
+    let operands = expression.split(/\+|\*|-/);
+
+    console.log(operands);
+
+    let text_3 = 'Javascript is awesome!';
+    let index = text_3.search(/is/);
+    console.log(index);
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>
