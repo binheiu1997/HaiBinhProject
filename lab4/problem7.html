@@ -3,101 +3,96 @@
 	<head>
 		<meta charset="utf-8">
 		<title>jQuery UI Accordion - Default functionality</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">  
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://fonts.google.com/">
 
 		<style type="text/css">
-			.navigation {				
+			.thanhBar {
 				background-color: #294a70;
-				padding-left: 150px;
+				border-bottom: 5px solid #f4a024;
+				display: block;
+				float: left;
+				width: 100%;
+			}
+			.navigation {
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+
+			}
+			li.info {
+				display: inline-block;
+				background-color: #294a70;
+				font-family: 'Open Sans', sans-serif;
+				padding: 10px;
+				border-left: 1px solid white;
+				margin-right: -4px;
+			}
+			li:hover {
+				background-color: #f4a024
+			}
+			a {
+				text-decoration: none;
+				color: #FFF;
+				font-size: 20px;
+			}
+			a:hover {
+				text-decoration: none;				
 			}
 
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
 			.dropdown-content {
 				display: none;
 				position: absolute;
 				background-color: #294a70;
-				min-width: 160px;
-				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-				padding: 12px 16px;
-				z-index: 1;
-			}
-
-			.dropdown:hover .dropdown-content {
-				color: #f4a024;
-				display: block;
-				text-decoration: none;
-			}
-			ul {
+				font-family: 'Open Sans', sans-serif;
+				padding: 10px;
 				list-style: none;
-				color: #D2d2d2;
-				text-decoration: none;
 			}
-			li {
+			.dropdown-content a {
+				text-decoration: none;
+				display: block;
+			}
+			li.liDropdown:hover {
+				background-color: #f4a024
 
 			}
-			li.info {		
-				display: inline-block;		
-				padding: 10px 20px;
-				border: solid white 1px;
-				border-top: 0px;
-				border-bottom: 0px;
-				
-			}
-			li.info:hover {
-				background-color:#f4a024;
-				text-decoration: none;				
-			}
-			li.infoDetail:hover {
-				background-color:#f4a024;
-				text-decoration: none;
-			}
-			#moreInfo {
-				display: inline-block;
-				text-decoration: none;
-				padding: 10px 20px;
-				border: solid white 1px;
-				border-top: 0px;
-				border-bottom: 0px;
-				text-decoration: none;
-			}
-			#moreInfo: hover {
-				background-color:#f4a024;
-				text-decoration: none;
-			}
-			a {
-				color: #fff;
-				font-size: 20px;
-				text-decoration: none;
-			}
-			a: hover {
-				text-decoration: none;
+			.dropdown:hover .dropdown-content {
+				display: block;
 			}
 		</style>
 	</head>
+
 	<body>
-		<div>
-			<nav>
-				<ul class="navigation">
-					<a href=""><li class="info">Trang chủ</li></a>
-					<a href=""><li class="info">Khoa CNTT</li></a>
-					<li class="dropdown" id="moreInfo">
-						<a href="">Chuong trinh dao tao</a>
-						<ul class="dropdown-content">
-							<a href=""><li class="infoDetail">Ngành Kỹ thuật phần mềm</li></a>
-							<a href=""><li class="infoDetail">Ngành mạng máy tính và truyền thông dữ liệu</li></a>
-							<a href=""><li class="infoDetail">Ngành khoa học máy tính</li></a>
-						</ul>
-					</li>
-					<a href=""><li class="info">Tin tức</li></a>
-					<a href=""><li class="info">Sự kiện</li></a>
-					<a href=""><li class="info">Nghiên cứu khoa học</li></a>
-					<a href=""><li class="info">Giáo vụ</li></a>
-					<a href=""><li class="info">Liên hệ</li></a>
-				</ul>
-			</nav>			
+
+		<div class="thanhBar">
+			<div class="container">
+				<nav>
+					<ul class="navigation">
+						<li class="info"><a href="" class="">Trang chủ</a></li>
+						<li class="info"><a href="">Khoa CNTT</a></li>
+						<li class="dropdown info">
+							<a href="">Chương trình đào tạo</a>
+							<ul class="dropdown-content">
+								<li class="liDropdown"><a href="">Ngành Kỹ thuật phần mềm</a></li>
+								<li class="liDropdown"><a href="">Ngành mạng máy tính và truyền thông dữ liệu</a></li>
+								<li class="liDropdown"><a href="">Ngành khoa học máy tính</a></li>
+							</ul>
+						</li>
+						<li class="info"><a href="">Tin tức</a></li>
+						<li class="info"><a href="">Sự kiện</a></li>
+						<li class="info"><a href="">Nghiên cứu khoa học</a></li>
+						<li class="info"><a href="">Giáo vụ</a></li>
+						<li class="info"><a href="">Liên hệ</a></li>
+					</ul>
+				</nav>			
+			</div>
 		</div>
+		
 	</body>
 	</html>
