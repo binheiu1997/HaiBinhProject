@@ -5,6 +5,13 @@
 header {
 	background-color: #009CD7
 }
+body {
+    font-family: Tno,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+    background-color: #f7f7f7;
+}
 img {
 	width: 100px;
 	height: 40px;
@@ -13,8 +20,23 @@ img {
 	top: 0;
 	margin left: 150px;
 }
-.logo {
-	float: right;
+.logo-index {
+    background: url(../img/TNO_wlogo.svg) no-repeat;
+    width: 180px;
+    height: 52px;
+    transition: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+a {
+	color: #333;
+    text-decoration: none;
+    display: block;
+}
+a:hover {
+
 }
 nav {
 	margin: 0 auto;
@@ -41,7 +63,4 @@ ul.heading {
 	text-transform: uppercase;
 	display: block;
 	padding: 10px 20px;
-}
-.heading li a:hover {
-	color: #FF0000
 }
