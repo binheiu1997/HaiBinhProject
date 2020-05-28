@@ -1,0 +1,354 @@
+
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Roboto Slab', serif;
+}
+.first {
+	background-color: #2c3e50;
+}
+.startContact {				
+	color: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-right: 0px;
+}
+.startInfo1 .startInfo2 .startInfo3{
+	display: inline-block;
+	position: relative;
+	min-height: 1px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.startInfo3 {
+	text-align: right;
+}
+i {
+	padding: 5px;
+}
+strong {
+	text-decoration: none;
+	color: white;
+}
+
+.second {
+	margin: 10px;
+}
+
+img {
+	width: 100%;
+}
+.cart {
+	display: inline-block;
+}
+input {
+	background-image: url(https://www.amicaleaxclubdefrance.fr/icone_search.png?v=2fq13s1omexxrrhr);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	margin: 50px;
+}
+.left {
+	padding-top: 32px;
+	padding-left: 5px;
+}
+.right {
+	padding-top: 35px;
+	padding-left: 0px;
+}
+@media only screen and (max-width: 600px) {
+	.icon {
+		width: 20%;
+	}
+	.startInfo3 {
+		text-align: left;
+	}
+
+}
+/*s--------------------------*/
+.thanhBar {
+	background-color: #652d92;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+li.info {
+	display: inline-block;
+	background-color: #652d92;
+	font-family: 'Open Sans', sans-serif;
+	margin-left: -4px;				
+}
+li:hover {
+	background-color: #753AA7;
+}
+div.third a {
+	text-decoration: none;
+	color: #FFF;
+	font-size: 16px;
+}
+a:hover {
+	text-decoration: none;
+	color: white;				
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	top: 45px;
+	background-color: #000;
+	font-family: 'Open Sans', sans-serif;
+	list-style: none;
+	padding: 0px;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+	text-decoration: none;
+	display: block;
+}
+.clerfix:after {
+	content: "";
+	clear: both;
+	display: block;
+	height: 0;
+}
+ul li.liDropdown{
+	border-bottom: 1px solid white;
+	font-size: 10px;
+	color: #652d92;
+}
+ul li.liDropdown a{
+	color: #652d92;
+}
+ul li.liDropdown:hover > a{
+	color: #FFF;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+	position: unset;
+}
+ul {
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+.info a p {
+	margin: 10px;
+}
+.liDropdown a p {
+	margin: 20px;
+}
+/*-------fourth*/
+
+.relate {
+
+
+}
+.bor {
+	border-bottom: 1px solid #696969;
+	border-top: 1px solid #696969;
+	border-right: 1px solid #696969;
+}
+.titleProduct a:hover{
+	text-decoration: none;
+}
+.titleProduct p {
+	text-decoration: none;
+	padding: 5px 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	background-color: #f8f8f8;
+	border-left: 5px solid #652d92;
+	margin-bottom: 0px;
+}
+.titleProduct {
+	margin-top: 10px;
+}
+
+.titleProduct a{
+	color: #3d443d;
+}
+.saleProduct {
+	margin-top: 20px;
+
+}
+.item {
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+	padding: 15px;
+	position: relative;
+	margin-bottom: 30px;
+}
+.item img {
+	width: 100%;
+}
+.item .giam-gia {
+	position: absolute;
+	top: 0px;
+	right: 15px;
+	padding-bottom: 4px;
+	color: #fff;
+	width: 40px;
+	height: 36px;
+	background-image: url("https://frontend.tikicdn.com/_new-next/static/img/icons/product/deal-tag.png");
+	background-size: 40px 36px;
+	background-position: 0px 0px;
+}
+.item .ten-sp {
+	color: #555;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.item .maSanPham {
+	color: #76658B;
+	font-weight: bold;
+	padding: 20px 0px;
+}
+.item a:hover{            
+	text-decoration: none;
+}
+.item .giaGoc {
+	font-weight: normal;
+	text-decoration: line-through;
+	font-size: 15px;
+
+}
+.item .gia {
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: red;
+}
+.previousWatch {
+	margin-top: 20px;
+}
+.previousWatch img {
+	width: 100%;
+}
+.previousWatch .ten-sp {
+	color: #555;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.itemWatchedNotDis .gia {
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: red;
+}
+
+.itemWatchedDiscount .giam-gia{
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	padding-bottom: 4px;
+	color: #fff;
+	width: 40px;
+	height: 36px;
+	background-image: url("https://frontend.tikicdn.com/_new-next/static/img/icons/product/deal-tag.png");
+	background-size: 40px 36px;
+	background-position: 0px 0px;
+}
+.itemWatchedDiscount .giaGoc {
+	font-weight: normal;
+	text-decoration: line-through;
+	font-size: 15px;
+}
+.itemWatchedDiscount .gia {
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: red;
+}
+
+/*----fifth-------*/
+
+.abc {
+	margin: 30px 0px;
+	border-top: 2px solid #672D91;
+	border-bottom: 2px solid #672D91;
+	padding: 30px 70px;
+	width: 100%;
+}
+@media only screen and (max-width: 600px) {
+	.abc {
+		padding: 20px 10px;
+	}
+	.abc img {
+		padding: 10px;
+	}
+  }
+.quangCao p{
+	padding-bottom:  0px;
+}
+.title {
+	color: #672D91;
+	font-weight: bold;
+}
+.quangCao {
+	color: #868686;
+}
+img {
+	width: 100%;
+}
+.xxx {
+	background-color: #F8F8F8;
+}
+h5 {
+	font-size: 17px;
+	font-weight: bold;
+	color: #f58220;
+}
+hr {
+	width: 50px;
+	border-bottom: 2px solid #672D91;
+	left: auto;
+	margin: 0;
+}
+.footer {
+	padding: 50px 0px;
+}
+footer {
+	text-align: center;				 
+	background-color: #2c3e50;
+	margin-top: 10px;
+}
+.copyRight {
+	color: #FFFFFF;
+	padding: 5px;
+}
+.info {
+	font-weight: bold;
+}
+a {
+	text-decoration: none;
+	color: #2d2d2d;
+}
+a:hover {
+	color: #2d2d2d;
+	text-decoration: none;
+}
+ul {
+	padding-top: 10px;
+	padding-left: 0px;
+}
+li {
+	text-decoration: none;
+	list-style: none;
+	padding: 2px;
+}
+i {
+	padding: 5px;
+}
+input {
+	width: 100px;
+	background-image: url(https://www.amicaleaxclubdefrance.fr/icone_search.png?v=2fq13s1omexxrrhr);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	transition-timing-function: linear;
+}

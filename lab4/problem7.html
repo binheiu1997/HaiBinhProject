@@ -43,6 +43,16 @@
 				color: white;				
 			}
 
+			a.icon::after {
+				content: "\f107";
+				font-family: FontAwesome;
+				margin-left: 10px;
+				margin-right: 0;
+				position: absolute;
+				right: -10px;
+				top: 12px;
+			}
+
 			.dropdown {
 				position: relative;
 				display: inline-block;
@@ -62,6 +72,7 @@
 				text-decoration: none;
 				display: block;
 			}
+			
 			ul li.liDropdown {
 				padding: 10px;
 				border-bottom: 1px solid white;
@@ -85,7 +96,8 @@
 						<li class="info" style="background-color: #f4a024"><a href="" class="">Trang chủ</a></li>
 						<li class="info"><a href="">Khoa CNTT</a></li>
 						<li class="dropdown info">
-							<a href="">Chương trình đào tạo</a>
+							<a href="" class="icon">Chương trình đào tạo
+							</a>
 							<ul class="dropdown-content">
 								<li class="liDropdown"><a href="">Ngành Kỹ thuật phần mềm</a></li>
 								<li class="liDropdown"><a href="">Ngành mạng máy tính và truyền thông dữ liệu</a></li>

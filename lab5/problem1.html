@@ -1,0 +1,263 @@
+<doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI Accordion - Default functionality</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.google.com/">
+
+		<style type="text/css">
+			body {
+				padding: 0px;
+				margin: 0px;
+				font-family: 'Roboto Slab', serif;
+			}
+			.first {
+				background-color: #2c3e50;
+			}
+			.startContact {				
+				color: #fff;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				margin-right: 0px;
+			}
+			.startInfo1 .startInfo2 .startInfo3{
+				display: inline-block;
+				position: relative;
+				min-height: 1px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+			.startInfo3 {
+				text-align: right;
+			}
+			i {
+				padding: 5px;
+			}
+			strong {
+				text-decoration: none;
+				color: white;
+			}
+
+			.second {
+				margin: 10px;
+			}
+
+			img {
+				width: 100%;
+			}
+			.cart {
+				display: inline-block;
+			}
+			input {
+				background-image: url(https://www.amicaleaxclubdefrance.fr/icone_search.png?v=2fq13s1omexxrrhr);
+				background-size: 30px;
+				background-repeat: no-repeat;
+				padding-left: 30px;
+				margin: 50px;
+			}
+			.left {
+				padding-top: 32px;
+				padding-left: 5px;
+			}
+			.right {
+				padding-top: 35px;
+				padding-left: 0px;
+			}
+			@media only screen and (max-width: 600px) {
+				.icon {
+					width: 20%;
+				}
+				.startInfo3 {
+					text-align: left;
+				}
+
+			}
+			/*s--------------------------*/
+			.thanhBar {
+				background-color: #652d92;
+				display: block;
+				float: left;
+				width: 100%;
+			}
+
+			li.info {
+				display: inline-block;
+				background-color: #652d92;
+				font-family: 'Open Sans', sans-serif;
+				margin-left: -4px;				
+			}
+			li:hover {
+				background-color: #753AA7;
+			}
+			div.third a {
+				text-decoration: none;
+				color: #FFF;
+				font-size: 16px;
+			}
+			a:hover {
+				text-decoration: none;
+				color: white;				
+			}
+
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+			.dropdown-content {
+				display: none;
+				position: absolute;
+				top: 45px;
+				background-color: #fff;
+				font-family: 'Open Sans', sans-serif;
+				list-style: none;
+				padding: 0px;
+				min-width: 160px;
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			}
+			.dropdown-content a {
+				text-decoration: none;
+				display: block;
+			}
+			.clerfix:after {
+				content: "";
+				clear: both;
+				display: block;
+				height: 0;
+			}
+			ul li.liDropdown{
+				border-bottom: 1px solid white;
+				font-size: 10px;
+				color: #652d92;
+			}
+			ul li.liDropdown a{
+				color: #652d92;
+			}
+			ul li.liDropdown:hover > a{
+				color: #FFF;
+			}
+			.dropdown:hover .dropdown-content {
+				display: block;
+			}
+			ul {
+				padding-left: 0px;
+				margin-bottom: 0px;
+			}
+			.info a p {
+				margin: 10px;
+			}
+			.liDropdown a p {
+				margin: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="first">
+			<div class="container">
+				<div class="startContact">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="startInfo1">
+								<i class="fa fa-phone"></i>Hotline: <strong>7345737</strong>-<strong>(078)876745</strong>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="startInfo2">
+								<i class="fa fa-map-marker"></i>Địa chỉ: <strong> 01, nguyen van cu, Quận Bình Thạnh</strong>
+							</div>	
+						</div>
+						<div class="col-md-1">
+							
+						</div>
+						<div class="col-md-4">
+							<div class="startInfo3">
+								<a href=""><strong>Đăng nhập</strong></a> hoặc <a href=""><strong>Tạo tài khoản mới</strong></a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="second">
+			<div class="container">
+				<div class="banner">
+					<div class="row">
+
+						<div class="col-md-5">
+							<img src="https://www.beta.violetonwednesday.com/wp-content/uploads/2015/09/Untitled-1.jpg">
+						</div>
+						<div class="col-md-1">
+							
+						</div>
+						<div class="col-md-3">
+							<input type="text" name="search" placeholder="tim kiem...">
+<!-- 							<button>
+								<a href=""> <img src="https://www.amicaleaxclubdefrance.fr/icone_search.png?v=2fq13s1omexxrrhr"></a>
+							</button> -->
+						</div>
+						<div class="col-md-3">
+							<div class="cart">
+								<div class="row">
+									<div class="col-md-4">
+										<a href="">
+											<div class="left">
+												<img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX17174158.jpg" style="background-color: red; border-radius: 50%;" class="icon">
+											</div>
+										</a>	
+									</div>
+									<div class="col-md-8">
+										<div class="right">
+											<div class="items">3 sản phẩm</div>
+											<div class="costs" style="color: red;">21231450 đ</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="third">
+			<div class="thanhBar">
+				<div class="container">
+					<nav>
+						<ul class="navigation clerfix">
+							<li class="info"  style="background-color: #753AA7;"><a href=""><p>TRANG CHỦ</p></a></li>
+							<li class="info"><a href=""><p>HOA SINH NHẬT</p></a></li>
+							<li class="info"><a href=""><p>HOA TÌNH YÊU</p></a></li>
+							<li class="info"><a href=""><p>HOA CHÚC MỪNG</p></a></li>
+							<li class="info"><a href=""><p>HOA VĂN PHÒNG</p></a></li>
+							<li class="info"><a href=""><p>CHỦ ĐỀ</p></a></li>
+							
+							<li class="dropdown info">
+								<a href=""><p style="margin: 10px;">THIẾT KẾ</p>	
+								</a>
+								<ul class="dropdown-content">
+									<li class="liDropdown"><a href=""><p>Hoa cảnh</p></a></li>
+									<li class="liDropdown"><a href=""><p>Hoa bó</p></a></li>
+									<li class="liDropdown"><a href=""><p>Hoa lăng</p></a></li>
+									<li class="liDropdown"><a href=""><p>Hoa cảnh</p></a></li>
+									<li class="liDropdown"><a href=""><p>Hoa bó</p></a></li>
+									<li class="liDropdown"><a href=""><p>Hoa lăng</p></a></li>
+								</ul>
+							</li>
+							<li class="info"><a href=""><p>THỂ LOẠI</p></a></li>
+							<li class="info"><a href=""><p>QUÀ TẶNG</p></a></li>
+						</ul>
+					</nav>			
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

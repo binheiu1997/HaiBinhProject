@@ -1,0 +1,264 @@
+<doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI Accordion - Default functionality</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.google.com/">
+
+		<style type="text/css">
+			.relate {
+
+
+			}
+			.bor {
+				border-bottom: 1px solid #696969;
+				border-top: 1px solid #696969;
+				border-right: 1px solid #696969;
+			}
+			.titleProduct a:hover{
+				text-decoration: none;
+			}
+			.titleProduct p {
+				text-decoration: none;
+				padding: 5px 10px;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: bold;
+				background-color: #f8f8f8;
+				border-left: 5px solid #652d92;
+				margin-bottom: 0px;
+			}
+
+			.titleProduct a{
+				color: #3d443d;
+			}
+			.saleProduct {
+				margin-top: 20px;
+
+			}
+			.item {
+				box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+				padding: 15px;
+				position: relative;
+				margin-bottom: 30px;
+			}
+			.item img {
+				width: 100%;
+			}
+			.item .giam-gia {
+				position: absolute;
+				top: 0px;
+				right: 15px;
+				padding-bottom: 4px;
+				color: #fff;
+				width: 40px;
+				height: 36px;
+				background-image: url("https://frontend.tikicdn.com/_new-next/static/img/icons/product/deal-tag.png");
+				background-size: 40px 36px;
+				background-position: 0px 0px;
+			}
+			.item .ten-sp {
+				color: #555;
+				font-weight: bold;
+				margin-top: 20px;
+			}
+			.item .maSanPham {
+				color: #76658B;
+				font-weight: bold;
+				padding: 20px 0px;
+			}
+			.item a:hover{            
+				text-decoration: none;
+			}
+			.item .giaGoc {
+				font-weight: normal;
+				text-decoration: line-through;
+				font-size: 15px;
+
+			}
+			.item .gia {
+				font-weight: bold;
+				margin-bottom: 20px;
+				font-size: 20px;
+				color: red;
+			}
+			.previousWatch {
+				margin-top: 20px;
+			}
+			.previousWatch img {
+				width: 100%;
+			}
+			.previousWatch .ten-sp {
+				color: #555;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			.itemWatchedNotDis .gia {
+				font-weight: bold;
+				margin-bottom: 20px;
+				font-size: 20px;
+				color: red;
+			}
+
+			.itemWatchedDiscount .giam-gia{
+				position: absolute;
+				top: 50%;
+				right: 15px;
+				padding-bottom: 4px;
+				color: #fff;
+				width: 40px;
+				height: 36px;
+				background-image: url("https://frontend.tikicdn.com/_new-next/static/img/icons/product/deal-tag.png");
+				background-size: 40px 36px;
+				background-position: 0px 0px;
+			}
+			.itemWatchedDiscount .giaGoc {
+				font-weight: normal;
+				text-decoration: line-through;
+				font-size: 15px;
+			}
+			.itemWatchedDiscount .gia {
+				font-weight: bold;
+				margin-bottom: 20px;
+				font-size: 20px;
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="relate">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="bor">
+							<div class="titleProduct"><a href=""><p>SẢN PHẨM KHUYẾN MÃI</p></a></div>
+						</div>
+						<div class="saleProduct">
+							<div class="row" id="saleProduct">
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="bor">
+							<div class="titleProduct">
+								<a href=""><p>SẢN PHẨM VỪA XEM</p></a>
+							</div>
+						</div>
+
+						<div class="previousWatch">
+							
+							<div class="itemWatchedNotDis">
+								<div class="row" id="notDiscount">
+
+								</div>
+							</div>
+
+							<div class="itemWatchedDiscount">
+								<hr>
+								<div class="row" id="discount">
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>			
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		var id = document.getElementById('saleProduct');
+		var id2 = document.getElementById('notDiscount');
+		var id3 = document.getElementById('discount'); 
+
+		id.innerHTML = concatenatesString1();
+		id2.innerHTML = concatenatesString2();
+		id3.innerHTML = concatenatesString3();
+
+		function concatenatesString1(){
+			var a = "";
+			for (var i = 0; i < 8; i++) {
+				a += `
+				<div class="col-md-3 col-6">
+
+
+				<div class="item"> 
+				<article>
+				<a href="">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkrz89C5pynOmAZFBaoh6lBuiT5kl3pajLwt-BKJ-ipU_CsKCZ&usqp=CAU">
+				</a>
+
+				<div class="giam-gia">-50%</div>
+				<a href=""><div class="ten-sp">Hoa hong ashd xa</div></a>
+
+				<div class="maSanPham">
+				<span>VOS36</span>
+				</div>
+
+				<div class="giaGoc">5.000.000 đ 
+				</div>
+				<div class="gia">
+				<span>2.000.000 đ</span>
+				</div>
+				</article>
+				</div>
+				</div>
+				`;          
+			}
+			return a;
+		}
+
+		function concatenatesString2(){
+			var a = "";
+			for (var i = 0; i < 2; i++) {
+				a += `
+				<div class="col-md-6 col-12">
+				<a href=""><img src="https://product.hstatic.net/1000363622/product/img_0320_55083f58101d4748a923e5e41d98129f_grande.jpg"></a>
+				</div>
+
+				<div class="col-md-6 col-12">
+				<a href=""><div class="ten-sp">Hoa thom ngat</div></a>
+				<div class="giam-gia" style="visibility: hidden;">xxx</div>
+				<div class="giaGoc" style="visibility: hidden;"> xxx
+				</div>
+				<div class="gia">
+				<span>2.000.000 đ</span>
+				</div>
+				</div>
+				`;          
+			}
+			return a;
+		}
+
+		function concatenatesString3(){
+			var a = "";
+			for (var i = 0; i < 2; i++) {
+				a += `
+				<div class="col-md-6 col-12">
+				<a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQ6-5rrenSnCAmn43eXUGPTyecm928TPAZ8mrLVl7a2baH5ow2&usqp=CAU"></a>
+				</div>
+
+				<div class="col-md-6 col-12">
+				<a href=""><div class="ten-sp">Hoa thom ngat giam gia</div></a>
+				<div class="giam-gia">-50%</div>
+				<div class="giaGoc">5.000.000 đ 
+				</div>
+				<div class="gia">
+				<span>2.000.000 đ</span>
+				</div>
+				</div>
+				`;          
+			}
+			return a;
+		}
+	</script>
+</body>
+</html>
