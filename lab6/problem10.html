@@ -1,0 +1,32 @@
+<doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI Accordion - Default functionality</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.google.com/">
+
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+			function myFunction(){
+				var list = document.getElementsByTagName("a");
+				var link = document.getElementById("link").value;
+				for (var i = 0; i < list.length; i++) {
+					list[i].href = link;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<a href="https://www.youtube.com/">Fist page</a>
+		<a href="https://www.facebook.com/">Second page</a>
+		<input type="" name="" placeholder="Nhập trang" id="link">
+		<button onclick="myFunction()">Chuyển</button>
+		
+	</body>
+	</html>

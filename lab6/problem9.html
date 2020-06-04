@@ -1,0 +1,43 @@
+<doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI Accordion - Default functionality</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.google.com/">
+
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+			function myFunction() {		
+				var textArray = document.getElementById("sentence").value;
+				var keyWord = document.getElementById("trans").value;
+				var split1=textArray.split(" ");
+				var split2=keyWord.split(" ");
+				for (var i = 0; i < split1.length; i++) {
+
+					for (var j =0; j < split2.length; j++) {
+
+						if(split1[i]==split2[j])
+						{
+							textArray=textArray.replace(split2[j],split2[j].toUpperCase());
+						}
+					}
+				}
+				alert(textArray)
+			}
+		</script>
+	</head>
+
+	<body>
+		<form>
+			<input type="" name="" placeholder="Nhập từ khóa" id="sentence">
+			<input type="" name="" placeholder="Nhập từ uppercase" id="trans">
+			<button onclick="myFunction()">Chuyển</button>
+		</form>
+		
+	</body>
+	</html>

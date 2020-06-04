@@ -35,18 +35,27 @@ strong {
 	margin: 10px;
 }
 
-img {
+div.col-md-5 img {
 	width: 100%;
+	margin: 10px 0px;
 }
 .cart {
 	display: inline-block;
 }
-input {
-	background-image: url(https://www.amicaleaxclubdefrance.fr/icone_search.png?v=2fq13s1omexxrrhr);
-	background-size: 30px;
-	background-repeat: no-repeat;
-	padding-left: 30px;
-	margin: 50px;
+.form-inline {
+	text-align: center;
+}
+
+.btn-search {
+	border: none;
+	margin: -15%;
+}
+.search {
+	text-align: center;
+}
+
+.media {
+
 }
 .left {
 	padding-top: 32px;
@@ -93,19 +102,21 @@ a:hover {
 }
 
 .dropdown {
-	position: relative;
+	position: absolute;
 	display: inline-block;
+	z-index: 999;
 }
 .dropdown-content {
 	display: none;
 	position: absolute;
 	top: 45px;
-	background-color: #000;
+	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	list-style: none;
 	padding: 0px;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
 }
 .dropdown-content a {
 	text-decoration: none;
@@ -118,14 +129,13 @@ a:hover {
 	height: 0;
 }
 ul li.liDropdown{
-	border-bottom: 1px solid white;
 	font-size: 10px;
 	color: #652d92;
 }
 ul li.liDropdown a{
 	color: #652d92;
 }
-ul li.liDropdown:hover > a{
+ul li.liDropdown:hover > a{	
 	color: #FFF;
 }
 .dropdown:hover .dropdown-content {
@@ -149,9 +159,9 @@ ul {
 
 }
 .bor {
-	border-bottom: 1px solid #696969;
-	border-top: 1px solid #696969;
-	border-right: 1px solid #696969;
+	margin-top: 10px;
+	border: 1px solid #696969;
+	border-left: none;
 }
 .titleProduct a:hover{
 	text-decoration: none;
@@ -164,9 +174,6 @@ ul {
 	background-color: #f8f8f8;
 	border-left: 5px solid #652d92;
 	margin-bottom: 0px;
-}
-.titleProduct {
-	margin-top: 10px;
 }
 
 .titleProduct a{
@@ -264,6 +271,9 @@ ul {
 	font-size: 20px;
 	color: red;
 }
+.itemWatchedDiscount hr {
+	width: 100%;
+}
 
 /*----fifth-------*/
 
@@ -281,7 +291,7 @@ ul {
 	.abc img {
 		padding: 10px;
 	}
-  }
+}
 .quangCao p{
 	padding-bottom:  0px;
 }
@@ -299,6 +309,7 @@ img {
 	background-color: #F8F8F8;
 }
 h5 {
+	margin-top: 20px;
 	font-size: 17px;
 	font-weight: bold;
 	color: #f58220;
@@ -307,10 +318,10 @@ hr {
 	width: 50px;
 	border-bottom: 2px solid #672D91;
 	left: auto;
-	margin: 0;
+	margin: 10px 0 20 0px;
 }
 .footer {
-	padding: 50px 0px;
+	padding: 20px 0px;
 }
 footer {
 	text-align: center;				 
@@ -333,8 +344,10 @@ a:hover {
 	text-decoration: none;
 }
 ul {
-	padding-top: 10px;
 	padding-left: 0px;
+}
+.footer li:hover {
+	background-color: #F8F8F8;
 }
 li {
 	text-decoration: none;
@@ -343,12 +356,4 @@ li {
 }
 i {
 	padding: 5px;
-}
-input {
-	width: 100px;
-	background-image: url(https://www.amicaleaxclubdefrance.fr/icone_search.png?v=2fq13s1omexxrrhr);
-	background-size: 30px;
-	background-repeat: no-repeat;
-	padding-left: 30px;
-	transition-timing-function: linear;
 }

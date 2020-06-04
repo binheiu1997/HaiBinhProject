@@ -1,0 +1,37 @@
+<doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI Accordion - Default functionality</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+			var products = [
+			{
+				"ProductName": "tập",
+				"ProductPrice": "1000",
+			},   {
+				"ProductName": "bút",
+				"ProductPrice": "2000",
+			},   {
+				"ProductName": "sách",
+				"ProductPrice": "3000",	
+			}
+			];
+			products.sort((a, b) => parseFloat(a.ProductPrice) - parseFloat(b.ProductPrice));
+
+			for (var i = 0; i < products.length; i++) {
+				console.log(products[i].ProductPrice);
+			}
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+	</html>
