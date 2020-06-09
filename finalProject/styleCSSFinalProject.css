@@ -200,9 +200,39 @@ img {
     padding: 0px;
     margin: 0 auto;
 }
-.titleNews {
+.headingMulti {
+    margin: 20px 0px 0px 20px;
+}
+.hinh {
+    position: relative;
+}
+.chuTrongHinh a{
+    text-decoration: none;
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 30px;
+    width: 90%;
+
+}
+
+.chuTrongHinh a:hover{
+    text-decoration: none;
+    color: yellow;
+}
+.multiNews {
+    margin: 0px 20px 20px 20px;
+}
+.titleNews a{
     color: #333;
     font-weight: bold;
+    text-decoration: none;
+}
+.titleNews a:hover {
+    text-decoration: none;
+    color: cornflowerblue;
 }
 
 #mainNews{
@@ -244,7 +274,12 @@ section.mainNews {
     margin: 6px 0 4px 0;
 }
 
-
+.section-title>h3.heading4 {
+    font-size: 25px;
+}
+.section-title>h3.heading5 {
+    font-size: 20px;
+}
 
 .multiTitle {
     text-decoration: none;
@@ -271,4 +306,79 @@ section.mainNews {
     color: red;
 }
 
+span:hover{
+    text-decoration: none;
+}
 
+img.hinhDanhChoBan {
+    width: 100%;
+   max-height: 170px;
+}
+.each {
+    margin: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+}
+.info {
+    color: #aaa;
+    font-size: 12px;
+    display: inline-block;
+    width: 20%;
+}
+.cata a{
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 13px;
+    color: #333;
+    display: inline-block;
+    width: 20%;
+}
+.cata a:hover {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.thuMuc {
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+.thuMucCon {
+    margin: 20px 0;
+}
+
+footer {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin: 0 auto 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #888;
+    font-size: 12px;
+    background: #f7f7f7;
+}
+
+footer .page-wrapper {
+    background: none !important;
+    overflow: hidden;
+    padding: 40px 0 50px !important;
+}
+.page-wrapper {
+    float: left;
+    position: relative;
+    clear: both;
+    z-index: 99;
+    padding: 0 30px;
+    background: #FFF !important;
+    width: 100%;
+}
+
+footer#footer .page-wrapper.footer-wrapper .left-side-info {
+    display: block;
+    flex-direction: row;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
