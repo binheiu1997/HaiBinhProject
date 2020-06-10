@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML DOM querySelectorAll() Method</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vjH4VFQEUUw-bLNSSq9JbPpL34Auk26vIeixu_ns4mP2_fUgKYshH4jg1sAP31F9vCuC-FZWOLbJ00Zoyz8h4TNsnsS5eFkSQFY6ikjaii_CXSyXunjjTv4X5u3QansYNADGJ61ejIDrCrBdwt16WIbbTKMxNyXReH6-vRCUUcR5WjVSwwZRNn9dFFBwP6-uJmAJmSVv72I-tWPcUByXtRGOVfvxtFXCjV7ie1u-v-5gQeJJ1ySDyi1p62DtrcN6DJITwP7k-eiktEvRlTvWBqKeVCusasYh3KQnwlAH5W9bWX_B3Ms-0V9VPWJNb9pWZAmtkXIBO87FrLEO37SaMafYcrFR6yIJArG-IvW1SI6A9kBicaJuxYDHv4G2bUIkgK4vpVlyu1F5RIuXVbFv5X40vileoZGyqWaHB403SV905VWNEwgCoc0zS9VMQfcsOomJocjj-7d2Zx-iKcNhoA" charset="UTF-8"></script>
+	<style>
+		a[target] {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="example">A heading with class="example"</h2>
+	<p class="example">A paragraph with class="example".</p>
+	<p class="example">Another paragraph with class="example".</p> 
+	<h3>A h3 element</h3>
+	<p>Click the button to add a background color to the first p element (index 0) in the document with class="example".</p>
+	<button onclick="changeColorP()">Change first backgroud</button>
+	<hr>
+
+	<div class="example">
+		A div with class="example"
+	</div>
+	<div class="example">
+		Another div with class="example"
+	</div>
+	<p class="example">This is a p element with class="example".</p>
+	<p>This is a <span class="example">span</span> element with class="example" inside another p element.</p>
+	<p>Click the button to change a margin and a padding and add a border of all elements with class="example".</p>
+	<button onclick="changeExample()">Change example</button>
+	<hr>
+	
+	<p>The CSS selector a[target] makes sure that all links with a target attribute gets a yellow background:</p>
+	<a href="https://www.w3schools.com">w3schools.com</a>
+	<a href="http://www.disney.com" target="_blank">disney.com</a>
+	<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+	<p>Click the button to add a red border and remove the underline to all links in the document with a target attribute.</p>
+	<button onclick="changeType()">Change type</button>
+	<hr>
+
+	<h1 class="Title">A H1 element</h1>
+	<h2 class="Title">A H2 element</h2>
+	<div class="Title">A DIV element</div>
+	<p>A p element.</p>
+	<p>A p element with a <span style="color:brown;">span</span> element inside.</p>
+	<p>Click the button to change the color of all h1 and h2 elements with class Title.</p>
+
+	<hr>
+	<button onclick="changeColor()">Change color</button>
+	
+	
+	
+
+	<script>
+		function changeColorP() {		
+			document.querySelector("p").style.backgroundColor = "red";
+		}
+		function changeExample() {		
+			document.querySelector("h2.example").style.border = "1px solid red"
+			document.querySelector("h2.example").style.margin = "10px"
+			document.querySelector("h2.example").style.padding = "10px"
+			document.querySelector("p.example").style.border = "1px solid red"
+			document.querySelector("p.example").style.margin = "10px"
+			document.querySelector("p.example").style.padding = "10px"
+		}
+		function changeType() {		
+			document.querySelector("div > p").style.fontSize = "xx-large";
+			document.querySelector("div > p").style.color = "red";
+		}
+		function changeColor() {		
+			document.querySelector("p").style.backgroundColor = "red";
+		}
+	</script>
+</body>
+</html>

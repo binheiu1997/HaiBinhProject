@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML DOM querySelector() Method</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vjH4VFQEUUw-bLNSSq9JbPpL34Auk26vIeixu_ns4mP2_fUgKYshH4jg1sAP31F9vCuC-FZWOLbJ00Zoyz8h4TNsnsS5eFkSQFY6ikjaii_CXSyXunjjTv4X5u3QansYNADGJ61ejIDrCrBdwt16WIbbTKMxNyXReH6-vRCUUcR5WjVSwwZRNn9dFFBwP6-uJmAJmSVv72I-tWPcUByXtRGOVfvxtFXCjV7ie1u-v-5gQeJJ1ySDyi1p62DtrcN6DJITwP7k-eiktEvRlTvWBqKeVCusasYh3KQnwlAH5W9bWX_B3Ms-0V9VPWJNb9pWZAmtkXIBO87FrLEO37SaMafYcrFR6yIJArG-IvW1SI6A9kBicaJuxYDHv4G2bUIkgK4vpVlyu1F5RIuXVbFv5X40vileoZGyqWaHB403SV905VWNEwgCoc0zS9VMQfcsOomJocjj-7d2Zx-iKcNhoA" charset="UTF-8"></script>
+	<style>
+		a[target] {
+			background-color: yellow;
+		}
+
+		div {
+			border: 1px solid black;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="example">A heading with class="example"</h2>
+	<p class="example">A paragraph with class="example".</p>
+	<p class="example">A paragraph 2 with class="example".</p>
+	<h3>A h3 element</h3>
+
+	<p>Click the button to add a background color to the first p element in the document with class="example".</p>
+	<button onclick="changeColorP()">Change first backgroud</button>
+	<hr>
+	<p>The CSS selector a[target] makes sure that all links with a target attribute gets a yellow background:</p>
+
+	<a href="https://www.w3schools.com">w3schools.com</a>
+	<a href="http://www.disney.com" target="_blank">disney.com</a>
+	<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+	<p>Click the button to add a red border to the first link that has a target attribute.</p>
+	<button onclick="changeBorderLink()">Change first border</button>
+	<hr>
+	<div>
+		<h3>H3 element</h3>
+		<p>I am a p element, my parent is a div element.</p>
+	</div>
+
+	<div>
+		<h3>H3 element</h3>
+		<p>I am a p element, my parent is also a div element.</p>
+	</div>
+
+	<p class="">Click the button to change a font size and a color of the first p element in the document where the parent is a div element.</p>
+	<hr>
+	<button onclick="changeSize()">Change size color</button>
+
+	
+	
+
+	<script>
+		function changeColorP() {		
+			document.querySelector("p").style.backgroundColor = "red";
+		}
+		function changeBorderLink() {		
+			document.querySelector("a[target]").style.border = "1px solid black"
+		}
+		function changeSize() {		
+			document.querySelector("div > p").style.fontSize = "xx-large";
+			document.querySelector("div > p").style.color = "red";
+		}
+	</script>
+</body>
+</html>

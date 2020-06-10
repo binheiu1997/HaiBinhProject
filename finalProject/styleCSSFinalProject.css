@@ -167,10 +167,38 @@ img {
 .slider {
     margin: 20px;
 }
-.slider img {
-    width: 100%
+.carousel-item img {
+    max-height: 385px;
 }   
 
+.carousel-indicators li {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+#carousel-control {
+  width: 4%
+}
+.noidung{
+    width: 100%; margin: 10px;
+}
+.midle-slider-prev,
+.midle-slider-next {
+  filter: invert(1);
+}
+
+.midle-slider-prev {
+  margin-left: -100px;
+}
+
+.midle-slider-next {
+  margin-right: -100px;
+}
+img.hinhSachHay {
+    width: 100%
+    max-height:100px;
+}
 .covid strong {
     color: #fff;
     background-color: #dd3333;
@@ -179,6 +207,39 @@ img {
 }
 .weather img {
     width: 10%;
+}
+
+.covid>span {
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    float: right;
+    border: 1px solid red;
+}
+.corona-event__recover  {
+    margin: 0 10px;
+}
+.corona-event__case {
+    margin: 0 10px;
+}
+
+.corona-event__death {
+    margin: 0 10px;
+}
+
+.stats-info.vn {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
 }
 .news {
     margin: 10px 0px;
@@ -235,6 +296,9 @@ img {
     color: cornflowerblue;
 }
 
+.smallTitleNews {
+    font-size: 12px;
+}
 #mainNews{
     font-size: 30px;
 }
@@ -312,12 +376,20 @@ span:hover{
 
 img.hinhDanhChoBan {
     width: 100%;
-   max-height: 170px;
+    max-height: 170px;
 }
 .each {
     margin: 10px;
     border-bottom: 1px solid #e1e1e1;
     padding-bottom: 10px;
+}
+.cata a{
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
+    color: #333;
+    display: inline-block;
+    padding: 0px 10px 0px 0px;
 }
 .info {
     color: #aaa;
@@ -325,13 +397,8 @@ img.hinhDanhChoBan {
     display: inline-block;
     width: 20%;
 }
-.cata a{
-    text-decoration: none;
-    font-family: inherit;
-    font-size: 13px;
-    color: #333;
-    display: inline-block;
-    width: 20%;
+.cataAndInfo{
+    margin: 10px;
 }
 .cata a:hover {
     text-decoration: none;
@@ -343,6 +410,31 @@ img.hinhDanhChoBan {
 }
 .thuMucCon {
     margin: 20px 0;
+}
+
+.eachSmall {
+    margin-bottom: 10px;
+}
+
+.scrollbar {
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+#imageSticky {
+    overflow: hidden;
+    background-color: #333;
+}
+
+#imageSticky a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 footer {
@@ -357,13 +449,14 @@ footer {
     color: #888;
     font-size: 12px;
     background: #f7f7f7;
+    margin-top: 150px;
 }
 
 footer .page-wrapper {
     background: none !important;
     overflow: hidden;
     padding: 40px 0 50px !important;
-}
+}                   
 .page-wrapper {
     float: left;
     position: relative;
@@ -373,6 +466,7 @@ footer .page-wrapper {
     background: #FFF !important;
     width: 100%;
 }
+
 
 footer#footer .page-wrapper.footer-wrapper .left-side-info {
     display: block;
