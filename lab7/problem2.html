@@ -57,19 +57,25 @@
 			document.querySelector("p").style.backgroundColor = "red";
 		}
 		function changeExample() {		
-			document.querySelector("h2.example").style.border = "1px solid red"
-			document.querySelector("h2.example").style.margin = "10px"
-			document.querySelector("h2.example").style.padding = "10px"
-			document.querySelector("p.example").style.border = "1px solid red"
-			document.querySelector("p.example").style.margin = "10px"
-			document.querySelector("p.example").style.padding = "10px"
+			var x1 = document.querySelectorAll(".example");
+			for (var i = 0; i < x1.length; i++) {
+				x1[i].style.border = "1px solid red";	
+				x1[i].style.margin = "10px";	
+				x1[i].style.padding = "10px";	
+			}
 		}
 		function changeType() {		
-			document.querySelector("div > p").style.fontSize = "xx-large";
-			document.querySelector("div > p").style.color = "red";
+			var x2 = document.querySelectorAll("a[target]");
+			for (var i = 0; i < x2.length; i++) {
+				x2[i].style.border = "1px solid red";	
+				x2[i].style.textDecoration  = "none";	
+			}
 		}
 		function changeColor() {		
-			document.querySelector("p").style.backgroundColor = "red";
+			var t = document.querySelectorAll("h1.Title, h2.Title");
+			for (var i = 0; i < t.length; i++) {
+				t[i].style.color = "red";
+			}
 		}
 	</script>
 </body>
