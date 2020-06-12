@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery UI Datepicker - Default functionality</title>
+	<link rel="stylesheet" href="./jquery-ui.css">
+	<script src="./jquery-1.12.4.js"></script>
+	<script src="./jquery-ui.js"></script>
+	<link rel="stylesheet" type="text/css" href="./styleCSSFinalProject.css">
+	<script type="text/javascript" src="./finalProject.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.google.com/">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script>
+		function function_load(){
+			jQuery.post("http://66.42.50.227/data-ajax.php", , function(r){
+				list = r;
+			}, "json")
+			.done(function(){
+				list.sort(function (a,b){
+					if ( parseInt(a.Price) < parseInt(b.Price) ){
+						return -1;
+					}
+					if ( parseInt(a.Price) > parseInt(b.Price) ){
+						return 1;
+					}
+					return 0;
+				});
+				console.log(list);
+			});
+		}
+
+		$(".ProductList").on("click", ".Del", function()
+		{
+			var_id = $(this).attr(id);
+			for (var i = 0; i < Product.length; i++) {
+				if (Product[i].Name.indexOf) {}			}
+		})
+	</script>
+
+	<style type="text/css">
+		.studentInfo {
+			display: inline-block;
+		}
+	</style>
+	<script type="text/javascript">
+		var student_list;
+		var DSLop;
+
+		$(document).ready(function(){
+			$.get(
+				"http://66.42.50.227/data-ajax.php",
+				{
+					GetProducts: "All"
+				})
+			.done(function(data){
+				student_list = JSON.parse(data);
+				for (var i = 0; i < student_list.length; i++) {
+					$("table tbody").append(`
+						<tr>
+						<td>${i+1}</td>
+						<td>${student_list[i].Name}</td>
+						<td>${student_list[i].Code}</td>
+
+						<td>
+						<a href="#" class="edit-button">Edit</a>
+						<a href="#" class="del-button">Delete</a>
+						</td>
+						</tr>
+						`);
+				}
+			});
+
+
+			$.get(
+				"http://66.42.50.227/data-ajax.php",
+				{
+					GetProducts: "Brand"
+				})
+			.done(function(data){
+				DSLop = JSON.parse(data);
+				for (var i = 0; i < DSLop.length; i++) {
+					$(".DanhSach").append(<li>${DSLop[i].BrandName}</li>);
+				}
+			});
+		});
+
+
+	</script>
+</head>
+<body>
+	<div class="container-fuild">
+		<div class="row">
+			<div class="col-md-2">
+				<p>Class list</p>
+				<ul>
+					<li>class 1</li>
+					<li>class 2</li>
+				</ul>
+			</div>
+			<div class="col-md-10">
+				<div>
+
+					<div class="card container-fuild">
+						<div class="card-header">
+							Featured
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Special title treatment</h5>
+							<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							<div class="studentInfo">
+								<input type="text" name="STT">
+								<input type="text" name="name">
+								<input type="text" name="email">
+								<form action="/action_page.php">
+									<select name="class" id="class">
+										<option value="class1">Class1</option>
+										<option value="class2">Class2</option>
+									</select>
+								</form>
+								<a href="#" class="btn btn-primary" type="button">Go somewhere</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<p>Student list</p>
+				</div>
+
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">First</th>
+							<th scope="col">Last</th>
+							<th scope="col">Handle</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>@mdo</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>@fat</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>Larry</td>
+							<td>the Bird</td>
+							<td>@twitter</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
